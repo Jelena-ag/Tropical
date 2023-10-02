@@ -1,0 +1,24 @@
+@use'./colors';
+
+@mixin burgerBtn {
+    position: absolute;
+    right: 0;
+    height: 3px;
+    content: '';
+    background-color: colors.$pure-white;
+    transition: .3s;
+}
+
+@mixin setFlex($flex-direction, $justify-content: center, $align-items: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin heroImages($bgImg, $bgattachment) {
+    background-image: colors.$blue-gradient, url($bgImg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: $bgattachment;
+}

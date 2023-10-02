@@ -1,0 +1,37 @@
+@use './utils/mixin';
+@use './utils/colors';
+
+.header {
+	position: relative;
+	@include mixin.setFlex(column);
+	height: 75vh;
+	padding: 2em;
+	text-align: center;
+	color: colors.$pure-white;
+	@include mixin.heroImages('../img/palm_640.jpeg', scroll);
+
+	&__heading {
+		font-family: 'Dancing Script', cursive;
+		font-size: 4.8rem;
+		font-weight: 300;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+	}
+
+	&__btn {
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		font-size: 1.4rem;
+		background: colors.$pure-white;
+		border: none;
+		border-radius: 8px;
+		color: colors.$dark;
+		text-transform: uppercase;
+
+		&::before {
+			background-color: colors.$light-white;
+		}
+	}
+}
