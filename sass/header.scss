@@ -8,7 +8,7 @@
 	padding: 2em;
 	text-align: center;
 	color: colors.$pure-white;
-	@include mixin.heroImages('../img/palm_640.jpeg', scroll);
+	@include mixin.heroImages('../img/header_640.jpeg', scroll);
 
 	&__heading {
 		font-family: 'Dancing Script', cursive;

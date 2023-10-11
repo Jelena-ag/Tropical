@@ -1,24 +1,45 @@
-@use'./colors';
+@use './colors';
 
 @mixin burgerBtn {
-    position: absolute;
-    right: 0;
-    height: 3px;
-    content: '';
-    background-color: colors.$pure-white;
-    transition: .3s;
+	position: absolute;
+	right: 0;
+	height: 3px;
+	content: '';
+	background-color: colors.$pure-white;
+	transition: 0.3s;
 }
 
-@mixin setFlex($flex-direction, $justify-content: center, $align-items: center) {
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
+@mixin setFlex(
+	$flex-direction,
+	$justify-content: center,
+	$align-items: center
+) {
+	display: flex;
+	flex-direction: $flex-direction;
+	justify-content: $justify-content;
+	align-items: $align-items;
 }
 
 @mixin heroImages($bgImg, $bgattachment) {
-    background-image: colors.$blue-gradient, url($bgImg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: $bgattachment;
+	background-image: colors.$blue-gradient, url($bgImg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: $bgattachment;
 }
+
+@mixin islandCardStyles {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin contactForm {
+	margin-bottom: 2em;
+	padding: 0.6em 1.2em;
+	border: none;
+	border-radius: 8px;
+	font-size: 1.6rem;
+}
+
+
+// zrobic mixin btn 

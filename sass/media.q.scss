@@ -1,0 +1,216 @@
+@use './utils/colors';
+@use './utils/mixin';
+
+@media (min-width: 576px) {
+	.main {
+		.dreams {
+			&__box {
+				flex-direction: row;
+				justify-content: space-between;
+				&-text {
+					width: 55%;
+					&--right {
+						text-align: right;
+					}
+				}
+				&-img {
+					width: 40%;
+					&--right {
+						order: 1;
+					}
+				}
+			}
+			&__img {
+				margin-bottom: 0;
+				max-height: 300px;
+			}
+		}
+
+		.offers {
+			&__option {
+				@include mixin.setFlex(row);
+				margin: 2em 0;
+				width: 100%;
+				&-img {
+					width: 50%;
+					&--right {
+						order: 1;
+					}
+				}
+				&-info {
+					@include mixin.setFlex(column, space-between);
+				}
+				&-heading {
+					margin-bottom: 0.5em;
+					font-size: 3.6rem;
+				}
+				&-btn {
+					padding: 1em;
+				}
+			}
+		}
+	}
+}
+
+// przetestować czy są potrzebne żeby opinie nie byle wąskie do 767px
+// nie dziła, sprawdzić
+@media (max-width: 767px) {
+	.main.reviews.section-padding {
+		padding: 6em 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.white-block {
+		height: 50px;
+		width: 45%;
+	}
+
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+
+	.section-heading {
+		font-size: 3.6rem;
+	}
+	.section-padding {
+		padding: 8em 2em;
+	}
+	.main {
+		.dreams {
+			&__text {
+				font-size: 1.8rem;
+			}
+		}
+		.hero-img {
+			padding: 30rem 2em;
+			hr {
+				margin: 0 auto;
+				width: 70%;
+			}
+			&__text {
+				font-size: 2.2rem;
+			}
+		}
+		.islands {
+			&__cards {
+				@include mixin.setFlex(row);
+				flex-wrap: wrap;
+			}
+			&__card {
+				margin: 1em;
+				width: 45%;
+			}
+		}
+	}
+	.footer {
+		&__boxes {
+			@include mixin.setFlex(row, space-between);
+		}
+		&__box-desktop {
+			display: block;
+		}
+		&__box {
+			margin: 2em;
+			width: 25%;
+			&:first-child {
+				width: 50%;
+			}
+		}
+		&__box-title {
+			font-size: 2.4rem;
+		}
+		&__box-list-item {
+			margin-bottom: 1em;
+			a {
+				color: colors.$light-white;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.burger-btn {
+		top: 50px;
+		right: 50px;
+	}
+	.header {
+		background-image: colors.$blue-gradient, url(../img/header_1920.jpeg);
+
+		&__heading {
+			font-size: 10rem;
+		}
+	}
+	.section-heading {
+		font-size: 4.8rem;
+	}
+	.section-padding {
+		padding: 10em 2em;
+	}
+
+	.nav {
+		&__item {
+			font-size: 4.8rem;
+		}
+	}
+	.main {
+		.dreams {
+			&__box {
+				margin: 5em 0;
+				&-text {
+					@include mixin.setFlex(column, flex-end);
+					margin-bottom: 2.5em;
+				}
+			}
+			&__title {
+				font-size: 3.6rem;
+			}
+			&__text {
+				font-size: 2.2rem;
+			}
+		}
+		.hero-img {
+			padding: 40rem 2em;
+			background-image: colors.$blue-gradient, url(../img/hero_1920.jpeg);
+
+			&__title {
+				font-size: 7.2rem;
+			}
+			hr {
+				width: 60%;
+				max-width: 900px;
+			}
+		}
+		.offers {
+			background-image: colors.$blue-gradient, url(../img/offer_1920.jpeg);
+			&__option {
+				&-img {
+					object-fit: cover;
+					height: 300px;
+				}
+				&-text {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1100px) {
+	.main {
+		.islands {
+			&__card {
+				width: 30%;
+			}
+		}
+	}
+}
