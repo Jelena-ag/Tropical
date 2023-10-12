@@ -8,7 +8,3 @@
 @use './footer.scss';
 @use './utils/keyframes.scss';
 @use './media.q.scss';
-
-// Cześć! Po obróceniu kart dłuższe nazwy wysp wyświetlają się w dwóch rzędach, ja dla zachowania pierwotnej formy zastosowałem dla -title w -info: position: relative; top: -2em; left: 50%; transform: translate(-50%); i działa jak powinno ale proszę popraw mnie jeśli to rozwiązanie nie jest właściwe lub jeśli znasz lepsze. Osobiście uważam, że takie przeskakujące nagłówki psują efekt a przecież diabeł tkwi w szczegółach
-
-// Nieźle to wychwyciłeś :) jak dodałem width:80%; i już nie przeskakuje

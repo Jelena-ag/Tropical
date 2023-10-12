@@ -1,5 +1,5 @@
-@use './utils/colors';
 @use './utils/mixin';
+@use './utils/colors';
 
 @media (min-width: 576px) {
 	.main {
@@ -28,7 +28,7 @@
 
 		.offers {
 			&__option {
-				@include mixin.setFlex(row);
+				display: flex;
 				margin: 2em 0;
 				width: 100%;
 				&-img {
@@ -52,11 +52,11 @@
 	}
 }
 
-// przetestować czy są potrzebne żeby opinie nie byle wąskie do 767px
-// nie dziła, sprawdzić
 @media (max-width: 767px) {
-	.main.reviews.section-padding {
-		padding: 6em 0;
+	.main {
+		.reviews.section-padding {
+			padding: 6em 0;
+		}
 	}
 }
 
@@ -121,7 +121,7 @@
 			display: block;
 		}
 		&__box {
-			margin: 2em;
+			margin: 0 2em;
 			width: 25%;
 			&:first-child {
 				width: 50%;

@@ -4,6 +4,7 @@
 .header {
 	position: relative;
 	@include mixin.setFlex(column);
+	align-items: center;
 	height: 75vh;
 	padding: 2em;
 	text-align: center;

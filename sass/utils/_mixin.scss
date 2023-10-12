@@ -9,15 +9,10 @@
 	transition: 0.3s;
 }
 
-@mixin setFlex(
-	$flex-direction,
-	$justify-content: center,
-	$align-items: center
-) {
+@mixin setFlex($flex-direction, $justify-content: center) {
 	display: flex;
 	flex-direction: $flex-direction;
 	justify-content: $justify-content;
-	align-items: $align-items;
 }
 
 @mixin heroImages($bgImg, $bgattachment) {
@@ -41,5 +36,4 @@
 	font-size: 1.6rem;
 }
 
-
-// zrobic mixin btn 
+// zrobic mixin btn
