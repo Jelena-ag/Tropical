@@ -26,10 +26,9 @@
 		padding: 0.8em 1.6em;
 		font-size: 1.4rem;
 		background: colors.$pure-white;
-		border: none;
-		border-radius: 8px;
 		color: colors.$dark;
 		text-transform: uppercase;
+		@include mixin.mainBtn;
 
 		&::before {
 			background-color: colors.$light-white;

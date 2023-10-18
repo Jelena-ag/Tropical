@@ -125,9 +125,8 @@
 					bottom: 2em;
 					width: 80%;
 					padding: 1em;
-					border-radius: 8px;
-					border: none;
 					background-color: colors.$green-color;
+					@include mixin.mainBtn;
 					&::before {
 						background-color: colors.$green-color-hover;
 					}
@@ -177,8 +176,7 @@
 				width: 100%;
 				color: colors.$pure-white;
 				background-color: colors.$main-color;
-				border: none;
-				border-radius: 8px;
+				@include mixin.mainBtn;
 
 				&::before {
 					background-color: colors.$secondary-color;
@@ -253,9 +251,8 @@
 			width: 100%;
 			max-width: 300px;
 			color: colors.$pure-white;
-			border: none;
-			border-radius: 8px;
 			background-color: colors.$main-color;
+			@include mixin.mainBtn;
 			&::before {
 				background-color: colors.$secondary-color;
 			}

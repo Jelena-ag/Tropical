@@ -36,4 +36,7 @@
 	font-size: 1.6rem;
 }
 
-// zrobic mixin btn
+@mixin mainBtn {
+	border-radius: 8px;
+	border: none;
+}
